@@ -1,0 +1,53 @@
+//accept the number as  input from user and display even digit 
+
+import java.util.*;
+
+class Digit
+{
+    public void DisplayEven(int iNo)
+    {
+        int iDigit = 0;
+
+        if(iNo < 0)
+        {
+            iNo = -iNo;
+        }
+
+        while(iNo != 0)
+        {  
+            iDigit = iNo % 10;
+            if( iDigit % 2 == 0)
+            {
+               System.out.println("even digit are :");
+               System.out.println(iDigit);
+            }
+            iNo = iNo /10;
+
+        }
+
+    }
+    
+}
+
+public class program46
+{
+    public static void main(String a[])
+    {
+        Scanner sobj = new Scanner(System.in);
+        int iValue1 = 0, iRet = 0;
+
+        System.out.println("Enter the number  :");
+        iValue1 = sobj.nextInt();
+
+        Digit dobj = new Digit();
+
+        dobj.DisplayEven(iValue1);
+        
+    }
+}
+
+
+
+
+
+
